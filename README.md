@@ -1,2 +1,6 @@
 # joystick
-joystick for drone/car using javascript 
+light weight joystick for drone/car using Html and javascript with readings....
+In pc it works by draging the mouse..
+In mobile it works by clicking...
+
+both environment (mobile and laptop) works well
