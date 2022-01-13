@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <style>
+            circle#stick {position:absolute;}
+        </style>
+
+    </head>
+    <body>
+         <div id="fit">
+         <svg width="400px" height="400px" preserveAspectRatio="xMidYMid meet" style="border:7px solid blue;" onclick="moves(event)" onmouseout="stops()">
+            <circle cx="200	" cy="200" r="100" stroke-width="5" fill="black"></circle>
+            <line x1="200" y1="0" x2="200" y2="400" style="stroke:green";stroke-width:2" />
+            				<line x1="0" y1="200" x2="400" y2="200" style="stroke:green";stroke-width:2" />
+            	
+            <circle  id="stick" cx="200" cy="200" r="50" stroke-width="5" fill="red"></circle>
+  
+         </svg>
+         <h2>X coord:<span id="xchange">0</span> |  Y coord:<span id="ychange">0</span></h2>
+         </div>
+
+
+         <script>
+    
+            function moves(event)
+            {
+                var stk=document.getElementById("stick")
+                var x=event.clientX
+                var y=event.clientY
+                var xch=document.getElementById("xchange")
+                var ych=document.getElementById("ychange")
+                xch.innerHTML=event.clientX-201
+                ych.innerHTML=event.clientY-197
+                stk.setAttribute("cx",x)
+                stk.setAttribute("cy",y)
+            }
+            function stops(event)
+            {
+                stk=document.getElementById("stick")
+                var x=200
+                var y=200
+                stk.setAttribute("cx",200)
+                stk.setAttribute("cy",200)
+                var xch=document.getElementById("xchange")
+                var ych=document.getElementById("ychange")
+                xch.innerHTML=0
+                ych.innerHTML=0
+               
+            }
+           
+  
+  
+        </script>
+    </body>
+</html>
